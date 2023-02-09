@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-item>
+    <ion-button fill="clear" color="purple">
+      <ion-icon slot="icon-only" name="menu" size="large"></ion-icon>
+    </ion-button>
+    <ion-avatar slot="end">
+      <img src="assets/avatar.png"/>
+    </ion-avatar>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="header">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-label>
+            <ion-note color="light" class="ion-margin-start" style="font-size: 20px;">
+              Card Balance
+            </ion-note>
+            <p>
+              <ion-chip color="light" style="font-size: 20px;">
+                <ion-icon name="cash-outline" color="light" size="medium"></ion-icon>
+                <ion-label class="ion-text-wrap">
+                  {{balance | currency}}
+                </ion-label>
+              </ion-chip>
+            </p>
+          </ion-label>
+        </ion-col>
+        <ion-col size="6" class="ion-text-end">
+          <ion-button color="light" size="default" shape="round">
+            <ion-text color="dark" style="font-size: 10px;"><b>Add Record</b></ion-text>
+            <ion-icon color="dark" name="add" slot="end"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-margin-horizontal ion-margin-top">
+        <ion-col>
+          <ion-label color="light">
+            <b>All Features</b>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-margin-horizontal">
+        <ion-col *ngFor="let item of features" size="6">
+          <ion-card style="border-radius: 20px;">
+            <ion-card-header>
+              <div align="center">
+                <ion-thumbnail>
+                  <ion-icon [color]="item.color" [name]="item.icon" size="large"></ion-icon>
+                </ion-thumbnail>
+              </div>
+            </ion-card-header>
+            <ion-card-content align="center">
+              <ion-label color="dark"><b>{{item.name}}</b></ion-label>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

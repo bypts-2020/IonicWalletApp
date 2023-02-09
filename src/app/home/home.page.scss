@@ -1,0 +1,27 @@
+io-header {
+    background: transparent;
+    ion-item {
+        --background: transparent;
+    }
+}
+
+ion-content {
+  .header {
+    height: 45vh;
+    width: 150%;
+    background-image: linear-gradient(to right top, #051937, #38245a, #77216c, #b70767, #eb124b);
+    box-shadow: 0, 1px 10px var(--ion-color-teriary) 10%;
+    border-radius: 0 0 50% 50%;
+    margin-left: -11vh;
+    margin-top: -60px;
+  }
+
+  ion-grid {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(10vh);
+      padding-bottom: 8vh;
+  }
+}
