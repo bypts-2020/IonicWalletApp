@@ -25,3 +25,8 @@ ion-content {
       padding-bottom: 8vh;
   }
 }
+
+.scroll {
+  overflow-y: auto;
+  max-height:fit-content;
+}
